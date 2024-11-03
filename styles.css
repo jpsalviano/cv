@@ -136,11 +136,11 @@ footer {
 
   footer {
     font-size: 14px;
+    gap: 5px;
   }
 
-  .footer-first-row, .footer-second-row {
+  .footer-second-row {
     flex-direction: column;
-    gap: 5px;
   }
 
   .logo {
