@@ -7,52 +7,105 @@
   <title>João Salviano - A Developer in the Making</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body>
-  <div class="container">
-    <header>
-      <figure class="logo-container">
-        <img class="logo" src="texto.png" alt="logo salviano.dev">
-      </figure>
-    </header>
+<body class="d-flex flex-column min-vh-100 container">
 
-    <main>
-      <section class="content">
-        <article>
-          <h1>👋 Hello, I am João!</h1>
-          <p>I'm <span class="age"></span> years old, and started learning how to program a few years ago, by <a href="https://www.udacity.com/certificate/JE35EDSF" target="_blank">2018</a>.</p>
-          <p>What began as a curiosity gradually turned into a career shift, and today I work as a Python and Angular developer, on independent projects.</p>
-          <p>Self-learning can be a challenge, so I recently enrolled in a <a href="https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx"
-              target="_blank">graduation program at Puc Minas</a> to strengthen my core software development skills.</p>
-          <p>I'm also working on some projects that I'll be displaying here to freshen up my GitHub. One of these is a blog where I'll document my daily learning journey from my coursework.</p>
-          <p><a href="https://casamento.salviano.dev/" target="_blank">Another one is my wedding invitation</a>, that I created to practice some front-end skills.</p>
-          <p>Reach me out on <a href="https://bsky.app/profile/salviano.dev" target="_blank">bsky</i></a> or <a href="mailto:salviano.dev@gmail.com">send me an email</a>.</p>
-        </article>
+  <header class="row">
+    <figure class="d-flex justify-content-center align-items-center">
+      <img class="logo" src="texto.png" alt="logo salviano.dev">
+    </figure>
+  </header>
+
+  <main class="row flex-grow-1">
+    <section class="container p-3 gap-5">
+      <article>
+        <h1 class="p-2">👋 Hello, I am João!</h1>
+        <p>I'm <span class="age"></span> years old, and started learning how to program a few years ago, by <a
+            href="https://www.udacity.com/certificate/JE35EDSF" target="_blank">2018</a>.</p>
+        <p>What began as a curiosity gradually turned into a career shift, and today I work as a Python developer in
+          Brazil.</p>
+        <p>Self-learning can be a challenge, so I recently enrolled in a <a
+            href="https://www.pucminas.br/PucVirtual/Graduacao/Paginas/Analise-e-Desenvolvimento-de-Sistemas-Tecnologo.aspx"
+            target="_blank">graduation program at Puc Minas</a> to strengthen my core software development skills.</p>
+        <p>Reach me out on <a href="https://bsky.app/profile/salviano.dev" target="_blank">bsky</i></a> or <a
+            href="mailto:salviano.dev@gmail.com">send me an email</a>.</p>
+      </article>
+
+      <section class="portfolio-container col-md-6 mx-auto col-12">
+        <div id="portfolio-carousel" class="carousel carousel-dark carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+  
+              <div class="card">
+                <img src="https://res.cloudinary.com/dlzt6kswe/image/upload/v1730655426/coming_soon_snwhao.png" class="card-img-top"
+                  alt="Coming soon">
+                <div class="card-body">
+                  <p class="card-text">A blog where I share some of my college learnings</p>
+                </div>
+              </div>
+  
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="card">
+                <a href="https://casamento.salviano.dev/" target="_blank">
+                  <img src="https://casamento.salviano.dev/assets/gj.png" class="card-img-top"
+                    alt="Wedding Invitation logo">
+                </a>
+                <div class="card-body">
+                  <p class="card-text">My Wedding Invitation</p>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Blog"></button>
+            <button type="button" data-bs-target="#portfolio-carousel" data-bs-slide-to="1"
+              aria-label="Wedding Invitation"></button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <footer>
-      <div class="footer-first-row">
-        <p><a href="https://github.com/jpsalviano/" target="_blank"><i class="fa-brands fa-github"></i></a></p>
-        <p><a href="https://bsky.app/profile/salviano.dev" target="_blank"><i class="fa-brands fa-bluesky"></i></a></p>
-      </div>
-      <div class="footer-second-row">
-        <p class="current-year"></p>
-      </div>
-    </footer>
-  </div>
+  <footer class="row gap-2">
+    <div class="d-flex justify-content-center gap-3">
+      <p><a href="https://github.com/jpsalviano/" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+      <p><a href="https://bsky.app/profile/salviano.dev" target="_blank"><i class="fa-brands fa-bluesky"></i></a></p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <p class="current-year"></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js"
+    integrity="sha512-N5K6sQXjzT79tR16zvBu7B0AqvYtHKvk3+eKuQWoVNQDGU5kR9W8OP3CTYtm3vVM2EtObrmtm0Jup17F718OyA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/brands.min.js"
-  integrity="sha512-N5K6sQXjzT79tR16zvBu7B0AqvYtHKvk3+eKuQWoVNQDGU5kR9W8OP3CTYtm3vVM2EtObrmtm0Jup17F718OyA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="script.js"></script>
 
 </html>
